@@ -1,6 +1,6 @@
 <script setup>
 import { ref , onMounted , watchEffect } from 'vue';
-import {  useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 import axios from 'axios'
 import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
@@ -150,6 +150,7 @@ const editTodo = async() => {
     })
     getAllTodos();
     cancelEditTodoItem();
+    console.log(res);    
     toast.success('更新成功', {
       "theme": "auto",
       "type": "default",
